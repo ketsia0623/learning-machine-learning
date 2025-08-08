@@ -11,41 +11,51 @@ I'm learning machine learning!
   - Review the ML process for supervised learning
 
 # Numpy
-Python library for creating N-dimensional arrays
 
-Faster & more efficient than Python lists
+## 1. Introduction
+- **NumPy**: Core Python library for numerical and scientific computing.
+- Basis for many data science libraries (Pandas, SciPy, scikit-learn).
+- Provides **N-dimensional arrays** and fast, vectorized operations.
 
-Supports broadcasting for quick function application
 
-Built-in tools for linear algebra, statistics, trigonometry, and random numbers
+## 2. Section Goals
+1. Understand NumPy
+2. Create arrays:
+   - From Python lists
+   - Using built-in functions
+   - Generating random data
+3. Retrieve array information (slicing & indexing)
+4. Perform basic NumPy operations
+5. Practice with exercises
 
-Why use NumPy?
+## 3. What is NumPy?
+- **N-dimensional array object**: `numpy.ndarray`
+- Supports:
+  - **Broadcasting**: Apply operations to entire arrays without loops
+  - **Mathematical functions**: Linear algebra, statistics, trig, random
 
-Speed & efficiency for large datasets
+## 4. Why Use NumPy?
+- More **memory-efficient** and **faster** than Python lists
+- Simplifies array operations with **vectorized code**
 
-Easy mathematical operations on entire arrays
+## 5. Creating NumPy Arrays
+```python
+import numpy as np
 
-Core Topics
+# From Python list
+arr = np.array([1, 2, 3])
 
-Creating Arrays
+# Built-in functions
+zeros = np.zeros((2, 3))     # 2x3 array of zeros
+ones = np.ones((3, 3))       # 3x3 array of ones
+range_arr = np.arange(0, 10, 2)  # [0, 2, 4, 6, 8]
+linspace_arr = np.linspace(0, 1, 5)  # 5 evenly spaced numbers
 
-From Python lists
-
-Using built-in NumPy functions
-
-Generating random data
-
-Indexing & Slicing
-
-Access specific elements, rows, or columns
-
-Extract subsets of data easily
-
-Operations
-
-Element-wise arithmetic on arrays
-
-Universal functions (e.g., np.sqrt(), np.exp())
+# Random data
+rand_uniform = np.random.rand(2, 2)     # Uniform [0, 1)
+rand_normal = np.random.randn(2, 2)     # Normal distribution
+rand_int = np.random.randint(0, 10, 5)  # Random integers
+```
 
 
 # Machine Learning Concepts
