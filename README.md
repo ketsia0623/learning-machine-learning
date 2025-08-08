@@ -71,8 +71,6 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
    - **Unsupervised Learning**: Discover patterns
 6. Deliver a data product/service
 
----
-
 ## 3. Why Use Machine Learning?
 - Solves problems such as:
   - Credit scoring
@@ -84,8 +82,6 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 - **Key requirement**: Good quality data.
 - Most time spent on data cleaning/organization, not algorithm coding.
 
----
-
 ## 4. Types of Machine Learning
 ### Supervised Learning
 - Uses **historical, labeled data** to predict a value.
@@ -96,8 +92,6 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 ### Unsupervised Learning
 - Uses **unlabeled data** to discover patterns (e.g., clustering customers by behavior).
 - Harder to evaluate performance without known “correct” answers.
-
----
 
 ## 5. Supervised ML Process
 1. **Collect & prepare data**  
@@ -111,14 +105,10 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 6. **Repeat** training & evaluation until performance is acceptable
 7. **Deploy model** for real-world use
 
----
-
 ## 6. Example: House Price Prediction
 - Features: Area, Bedrooms, Bathrooms
 - Label: Price
 - ML model learns feature importance from historical sales data to predict future prices.
-
----
 
 ## 7. Companion Resource
 - **Book**: *Introduction to Statistical Learning (ISLR)*
@@ -127,6 +117,82 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 
 
 # Linear Regression
+## 1. Overview
+- First ML algorithm covered — one of the oldest.
+- Topics:
+  - Theory & history
+  - Ordinary Least Squares (OLS)
+  - Cost function
+  - Gradient descent
+  - Scikit-learn implementation
+  - Polynomial regression
+  - Regularization
+  - Performance evaluation
 
+## 2. History
+- Originated in the 1700s for astronomy/navigation calculations.
+- Contributors:
+  - Roger Cotes (1722), Tobias Mayer (1750), Boscovich (1757), LaPlace (1788)
+  - Legendre (1805) — published least squares
+  - Gauss (1809) — claimed earlier invention
+  - Robert Adrain (1808)
+- Goal: Fit a straight-line relationship between variables to make predictions.
+
+## 3. Core Concept
+- **Simple Linear Regression**:  
+  \( y = m x + b \) — predicts continuous target `y` from one feature `x`.
+- **Goal**: Minimize residual errors between actual values and predictions.
+- **Residuals**: \( y - \hat{y} \)  
+  Squared to avoid canceling and simplify math (Sum of Squared Errors).
+
+## 4. Ordinary Least Squares (OLS)
+- Minimizes the sum of squared residuals.
+- Analytical solution possible for **one feature**:
+  \[
+  m = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}, \quad b = \bar{y} - m \bar{x}
+  \]
+- For **multiple features**: Represent data as matrix \( X \), coefficients as \( \beta \).
+- Not scalable for many features — use **gradient descent**
+
+## 5. Cost Function
+- Measures model error:
+  \[
+  J(\beta) = \frac{1}{2m} \sum_{i=1}^m (y_i - \hat{y}_i)^2
+  \]
+- **Goal**: Find \(\beta\) values minimizing \(J(\beta)\)
+
+## 6. Gradient Descent
+- Iteratively updates coefficients:
+  \[
+  \beta := \beta - \alpha \frac{\partial J}{\partial \beta}
+  \]
+  - \(\alpha\) = learning rate.
+- Steps:
+  1. Initialize \(\beta\) values.
+  2. Calculate gradient.
+  3. Update coefficients in direction of **negative gradient**.
+  4. Repeat until convergence.
+
+## 7. Scikit-Learn Workflow
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Train model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predict
+predictions = model.predict(X_test)
+
+# Evaluate
+mae = mean_absolute_error(y_test, predictions)
+mse = mean_squared_error(y_test, predictions)
+rmse = mse ** 0.5
+```
 
 # Logistic Regression
