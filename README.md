@@ -1,9 +1,16 @@
 # learning-machine-learning
 I'm learning machine learning!
 
-## Machine Learning Intro
+# Machine Learning Intro
+- **Machine Learning (ML)**: Statistical computer algorithms that improve automatically through data.
+- Differs from traditional programming: Algorithms infer the best approach from the data itself.
+- Subset of Artificial Intelligence.
+- Main goals:
+  - Understand problems solved by ML
+  - Learn types of ML
+  - Review the ML process for supervised learning
 
-## Numpy
+# Numpy
 Python library for creating N-dimensional arrays
 
 Faster & more efficient than Python lists
@@ -41,21 +48,10 @@ Element-wise arithmetic on arrays
 Universal functions (e.g., np.sqrt(), np.exp())
 
 
-## Machine Learning Concepts
-# Overview of Machine Learning
+# Machine Learning Concepts
+## Overview of Machine Learning
 
-# 1. Introduction
-- **Machine Learning (ML)**: Statistical computer algorithms that improve automatically through data.
-- Differs from traditional programming: Algorithms infer the best approach from the data itself.
-- Subset of Artificial Intelligence.
-- Main goals:
-  - Understand problems solved by ML
-  - Learn types of ML
-  - Review the ML process for supervised learning
-
----
-
-# 2. ML Pathway
+## 2. ML Pathway
 1. Real-world problem/question
 2. Collect & store data
 3. Clean & organize data
@@ -67,7 +63,7 @@ Universal functions (e.g., np.sqrt(), np.exp())
 
 ---
 
-# 3. Why Use Machine Learning?
+## 3. Why Use Machine Learning?
 - Solves problems such as:
   - Credit scoring
   - Insurance risk
@@ -80,7 +76,7 @@ Universal functions (e.g., np.sqrt(), np.exp())
 
 ---
 
-# 4. Types of Machine Learning
+## 4. Types of Machine Learning
 ### Supervised Learning
 - Uses **historical, labeled data** to predict a value.
 - Two types:
@@ -93,7 +89,7 @@ Universal functions (e.g., np.sqrt(), np.exp())
 
 ---
 
-# 5. Supervised ML Process
+## 5. Supervised ML Process
 1. **Collect & prepare data**  
    - Separate into **Features (X)** and **Label (y)**
 2. **Split data** into:
@@ -107,20 +103,20 @@ Universal functions (e.g., np.sqrt(), np.exp())
 
 ---
 
-# 6. Example: House Price Prediction
+## 6. Example: House Price Prediction
 - Features: Area, Bedrooms, Bathrooms
 - Label: Price
 - ML model learns feature importance from historical sales data to predict future prices.
 
 ---
 
-# 7. Companion Resource
+## 7. Companion Resource
 - **Book**: *Introduction to Statistical Learning (ISLR)*
   - Free online
   - Written for R, but math concepts apply to all languages
 
 
-## Linear Regression
+# Linear Regression
 
 
-## Logistic Regression
+# Logistic Regression
