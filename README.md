@@ -195,4 +195,34 @@ mse = mean_squared_error(y_test, predictions)
 rmse = mse ** 0.5
 ```
 
+### Scikit-Learn Overview
+
+- NumPy has built-in capabilities for simple linear regression, but for more complex models, **Scikit-Learn** is needed.
+- **Scikit-Learn**:
+  - Library containing many machine learning algorithms.
+  - Uses a generalized “estimator API” framework — importing, fitting, and using models is uniform across algorithms.
+  - This uniform framework allows easy swapping of algorithms and testing various approaches.
+  - Convenience tools:
+    - Train/test split functions
+    - Cross-validation tools
+    - Variety of reporting metric functions
+  - “One-stop shop” for many ML needs.
+
+- **Philosophy**:
+  - Focuses on applying models and performance metrics.
+  - Pragmatic, industry-style approach (not academic model parameter explanation).
+  - Academic users who prefer detailed statistical reporting (e.g., significance levels) may explore the `statsmodels` library.
+
+### Scikit-Learn Framework for Supervised ML Process
+
+1. Perform **Train/Test split**.
+2. Four main components after split:
+   - **X_train**, **X_test**
+   - **y_train**, **y_test**
+3. Use `train_test_split` (and more advanced cross-validation if needed):
+   ```python
+   from sklearn.model_selection import train_test_split
+   X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+
 # Logistic Regression
