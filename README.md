@@ -59,9 +59,8 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 
 
 # Machine Learning Concepts
-## Overview of Machine Learning
 
-## 2. ML Pathway
+## 1 ML Pathway
 1. Real-world problem/question
 2. Collect & store data
 3. Clean & organize data
@@ -71,7 +70,7 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
    - **Unsupervised Learning**: Discover patterns
 6. Deliver a data product/service
 
-## 3. Why Use Machine Learning?
+## 2 Why Use Machine Learning?
 - Solves problems such as:
   - Credit scoring
   - Insurance risk
@@ -82,7 +81,7 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 - **Key requirement**: Good quality data.
 - Most time spent on data cleaning/organization, not algorithm coding.
 
-## 4. Types of Machine Learning
+## 3 Types of Machine Learning
 ### Supervised Learning
 - Uses **historical, labeled data** to predict a value.
 - Two types:
@@ -93,7 +92,7 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 - Uses **unlabeled data** to discover patterns (e.g., clustering customers by behavior).
 - Harder to evaluate performance without known “correct” answers.
 
-## 5. Supervised ML Process
+## 4 Supervised ML Process
 1. **Collect & prepare data**  
    - Separate into **Features (X)** and **Label (y)**
 2. **Split data** into:
@@ -105,15 +104,13 @@ rand_int = np.random.randint(0, 10, 5)  # Random integers
 6. **Repeat** training & evaluation until performance is acceptable
 7. **Deploy model** for real-world use
 
-## 6. Example: House Price Prediction
+## 5 Example: House Price Prediction
 - Features: Area, Bedrooms, Bathrooms
 - Label: Price
 - ML model learns feature importance from historical sales data to predict future prices.
 
-## 7. Companion Resource
-- **Book**: *Introduction to Statistical Learning (ISLR)*
-  - Free online
-  - Written for R, but math concepts apply to all languages
+*Introduction to Statistical Learning (ISLR)*
+
 
 
 # Linear Regression
